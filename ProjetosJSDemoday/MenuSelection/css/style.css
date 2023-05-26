@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#c36a6a, #6d4590);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.select-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+}
+
+.select-btn .btn-text {
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.select-btn .arrow-dwn {
+    display: flex;
+    height: 21px;
+    width: 21px;
+    font-size: 14px;
+    border-radius: 50%;
+    color: white;
+    background-color: #007fee;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.select-btn.open .arrow-dwn {
+    transform: rotate(-180deg);
+}
+
+.list-items {
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+    display: none;
+}
+
+.select-btn.open ~ .list-items {
+    display: block;
+}
+
+.item .item-next {
+    font-size: 15px;
+    font-weight: 400;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.item .item-next:hover {
+    background: #e7edfe;
+}
+
+.list-items .item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.item .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.item.checked .checkbox {
+    background-color: #09f45b;
+    border-color: #000000;
+}
+
+.checkbox .fa-check {
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.item.checked .checkbox .fa-check {
+    transform: scale(1);
+}

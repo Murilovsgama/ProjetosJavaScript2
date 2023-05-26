@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  html,
+  body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(136deg, #0dfbff, #e259c4);
+  }
+  
+  .search-box {
+    height: 60px;
+    position: relative;
+    width: 60px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .search-box.active, .search-btn {
+    width: 350px;
+    color: #664aff;
+  }
+  
+  .search-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 0 60px 0 20px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .search-box input.active {
+    opacity: 1;
+    color: #000000;
+  }
+  
+  .search-box .search-btn {
+    height: 60px;
+    width: 60px;
+    color: #664aff;
+    position: absolute;
+    float: right;
+    z-index: 1;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    background: #fff;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .search-box .search-btn.active {
+    right: 120px; /* Aumentei a distância para evitar sobreposição */
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background: #664aff;
+    line-height: 50px;
+    transform: translateY(-50%) rotate(360deg);
+  }
+  
+  .search-box .cancel-btn {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    transform: translateY(-50%);
+    color: #ca0ee3;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .search-box .cancel-btn.active{
+    right: -40px;
+    transform: translateY(-50%) rotate(360deg);
+  }
+  .search-box .search-data{
+    text-align: center;
+    padding-top: 7px;
+    color: #ca0ee3;
+    font-size: 18px;
+    word-wrap: break-word;
+  }
+  .search-box .search-btn.active{
+    display: none;
+  }
